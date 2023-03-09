@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<% if (messages.error){ %>
+    <div class="alert alert-danger" role="alert">
+        <%= messages.error %>
+    </div>
+    <% } %>
+
+        <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title> Login Page </title>
+            <style>
+                Body {
+                    font-family: Calibri, Helvetica, sans-serif;
+                    background-color: white;
+                }
+                
+                button {
+                    background-color: #0070ba;
+                    width: 20%;
+                    min-width: 50px;
+                    color: white;
+                    padding: 15px 20px;
+                    margin: 10px 0px;
+                    border: none;
+                    cursor: pointer;
+                }
+                
+                form {
+                    border: 3px solid #f1f1f1;
+                    background-color: whitesmoke;
+                    margin: 20px 20px;
+                }
+                
+                input[type=email],
+                input[type=password] {
+                    width: 100%;
+                    margin: 8px 0;
+                    padding: 12px 20px;
+                    display: inline-block;
+                    border: 2px solid #307dd1;
+                    box-sizing: border-box;
+                }
+                
+                button:hover {
+                    transition: background-color 0.5s ease;
+                    background-color: #5091bc;
+                }
+                
+                .container {
+                    padding: 25px;
+                    padding-top: 0px;
+                }
+                
+                .image {
+                    max-width: 200px;
+                    width: 40%;
+                    margin: auto;
+                    display: block;
+                }
+            </style>
+        </head>
+
+        <body>
+            <center>
+                <h1>Login:</h1>
+            </center>
+            <form action="/login" method="post">
+
+                <img src="./public/account.png" alt="Image" class="row image">
+                <div class="container">
+                    <label>Email: </label>
+                    <input type="email" placeholder="Enter Email" name="email" required>
+                    <label>Password: </label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <center>
+                        <button type="submit" class="btn">Login</button>
+                        <a style="text-decoration: none;" href="/register">
+                            <button type="button" class="btn">Register</button>
+                        </a>
+                    </center>
+                </div>
+            </form>
+        </body>
+
+</html>

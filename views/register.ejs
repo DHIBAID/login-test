@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register Page</title>
+    <style>
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: white;
+        }
+        
+        button {
+            background-color: #0070ba;
+            width: 20%;
+            min-width: 50px;
+            color: white;
+            padding: 5px 5px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .login {
+            margin-left: 5px
+        }
+        
+        form {
+            border: 3px solid #f1f1f1;
+            background-color: whitesmoke;
+            margin: 20px 20px;
+        }
+        
+        input[type=email],
+        input[type=password],
+        input[type=text] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid #307dd1;
+            box-sizing: border-box;
+        }
+        
+        button:hover {
+            transition: background-color 0.5s ease;
+            background-color: #5091bc;
+        }
+        
+        .container123 {
+            padding: 25px;
+            padding-top: 0px;
+        }
+        
+        .image {
+            max-width: 200px;
+            width: 40%;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Register:</h1>
+    </center>
+    <form action="/register" method="post">
+
+        <div class="container">
+            <div class="row">
+                <img src="./public/account.png" alt="Image" class="col image">
+                <div class="container123 col">
+                    <label>Name: </label>
+                    <input type="text" name="name" placeholder="Enter name" id="name" required>
+                    <label>Email: </label>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+                    <label>Password: </label>
+                    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                    <center>
+                        <button type="submit" class="btn register">Register</button>
+                        <a style="text-decoration: none;" href="/login">
+                            <button type="button" class="btn login">Login</button>
+                        </a>
+                    </center>
+                </div>
+            </div>
+    </form>
+</body>
+
+</html>
